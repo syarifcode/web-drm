@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DramaBox - Nonton Drama Gratis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-film"></i>
+                <span>DramaBox</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Beranda</a>
+                <a href="#trending" class="nav-link"><i class="fas fa-fire"></i> Trending</a>
+                <a href="#latest" class="nav-link"><i class="fas fa-clock"></i> Terbaru</a>
+                <a href="#vip" class="nav-link"><i class="fas fa-crown"></i> VIP</a>
+            </div>
+            <div class="nav-search">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Cari drama...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="app">
+        <!-- Home Section -->
+        <section id="home" class="page active">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-star"></i> Rekomendasi Untukmu</h2>
+                    <a href="#foryou" class="view-all">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div id="foryou-list" class="drama-grid">
+                    <!-- For You content will be loaded here -->
+                </div>
+
+                <div class="section-header">
+                    <h2><i class="fas fa-fire"></i> Sedang Trending</h2>
+                    <a href="#trending" class="view-all">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div id="trending-list" class="drama-grid">
+                    <!-- Trending content will be loaded here -->
+                </div>
+
+                <div class="section-header">
+                    <h2><i class="fas fa-clock"></i> Drama Terbaru</h2>
+                    <a href="#latest" class="view-all">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div id="latest-list" class="drama-grid">
+                    <!-- Latest content will be loaded here -->
+                </div>
+
+                <div class="section-header">
+                    <h2><i class="fas fa-crown"></i> Drama VIP</h2>
+                    <a href="#vip" class="view-all">Lihat Semua <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div id="vip-list" class="drama-grid">
+                    <!-- VIP content will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section id="search" class="page">
+            <div class="container">
+                <div class="search-results-header">
+                    <h2>Hasil Pencarian</h2>
+                    <div id="search-query"></div>
+                </div>
+                <div id="search-results" class="drama-grid">
+                    <!-- Search results will be loaded here -->
+                </div>
+                <div id="popular-searches" class="popular-searches">
+                    <h3><i class="fas fa-search"></i> Pencarian Populer</h3>
+                    <div id="popular-list" class="popular-tags">
+                        <!-- Popular searches will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detail Section -->
+        <section id="detail" class="page">
+            <div class="container">
+                <button id="back-btn" class="back-btn"><i class="fas fa-arrow-left"></i> Kembali</button>
+                <div id="detail-content">
+                    <!-- Detail content will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Player Section -->
+        <section id="player" class="page">
+            <div class="container">
+                <button id="player-back-btn" class="back-btn"><i class="fas fa-arrow-left"></i> Kembali ke Detail</button>
+                <div id="player-container">
+                    <!-- Video player will be loaded here -->
+                </div>
+                <div id="episode-list" class="episode-container">
+                    <!-- Episode list will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-film"></i>
+                    <span>DramaBox</span>
+                </div>
+                <p class="footer-description">
+                    Nonton drama gratis tanpa bayar. Kumpulan drama terbaru dan terlengkap dengan subtitle Indonesia.
+                </p>
+                <div class="footer-links">
+                    <a href="#home">Beranda</a>
+                    <a href="#trending">Trending</a>
+                    <a href="#latest">Terbaru</a>
+                    <a href="#vip">VIP</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2024 DramaBox. Semua hak cipta dilindungi. Konten disediakan oleh API DramaBox.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Memuat...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
